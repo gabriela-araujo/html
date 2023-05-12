@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+
+    /* Ao iniciar um projeto, é importante colocar como configuração global
+    o ajuste de 0px em margin e padding, para resetar qualquer configuração default que o navegador
+    possa fazer. */
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+
+    /* vh significa viewport que pode ser assimilada como JANELA DO NAVEGADOR. Então, quando dizemos que o html e o body
+    terão uma altura mínima de 100 da janela de visualização do navegador, significa que independente do conteudo dentro
+    do elemento que vamos criar, ele sempre terá 100% da altura da janela do navegador.
+    
+    A vantagem de usar vh para definir a altura mínima é que ela se ajusta automaticamente à altura do 
+    dispositivo em que o site está sendo visualizado. Isso é especialmente útil em dispositivos móveis, 
+    onde a altura da janela pode variar devido a rotação ou à presença da barra de navegação.
+    
+    No entanto, é importante lembrar que o valor de min-height em vh é relativo à altura da janela de visualização, 
+    o que significa que ele pode mudar se o tamanho da janela do navegador for alterado. Como todos os navegadores suportam vh ou suportam de forma consistente, é importante fazer testes em diferentes dispositivos.*/
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    padding-top: 50px;
+    font-variant: small-caps;
+}
+
+header p {
+    padding-bottom: 50px;
+}
+
+a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+
+    /* Aqui, adicionamos padding bottom e top de 10px para começar a criar um efeito parallax. Onde queremos que as sections tenham 10vh tanto do topo, quanto da parte debaixo para criar uma distância do próximo conteúdo. Isso ajuda a dar a sensação, quando rolamos a página pra baixo, de que o conteúdo está "mexendo" */
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgba(54, 54, 54, 0.6);
+    color: white;
+    /* Para o background color, coloquei PRETO, depois cliquei no icone da cor e ajustei para o cinza. Esse passo é importante para 
+    definir a opacidade, que também pode ser ajustada através do mesmo método*/
+}
+
+section.imagem > p {
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.246);
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
