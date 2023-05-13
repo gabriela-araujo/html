@@ -78,6 +78,10 @@ section {
     /* Aqui, adicionamos padding bottom e top de 10px para começar a criar um efeito parallax. Onde queremos que as sections tenham 10vh tanto do topo, quanto da parte debaixo para criar uma distância do próximo conteúdo. Isso ajuda a dar a sensação, quando rolamos a página pra baixo, de que o conteúdo está "mexendo" */
 }
 
+section > p {
+    padding-bottom: 2em;
+}
+
 section.normal {
     background-color: white;
     color: black;
@@ -86,17 +90,35 @@ section.normal {
 section.imagem {
     background-color: rgba(54, 54, 54, 0.6);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.49);
     /* Para o background color, coloquei PRETO, depois cliquei no icone da cor e ajustei para o cinza. Esse passo é importante para 
-    definir a opacidade, que também pode ser ajustada através do mesmo método*/
+    definir a opacidade, que também pode ser ajustada através do mesmo método
+    
+    Também adicionamos uma sombra "pra dentro" do box usando a configuração box-shadow inset */
 }
 
 section.imagem > p {
     display: inline-block;
     padding: 5px;
     background-color: rgba(0, 0, 0, 0.246);
+    text-shadow: 1px 1px 0px black;
 
     /* Aqui na section aonde teremos o texto, adicionamos um display inline-block para que se crie 
     uma caixa que se adapta ao tamanho do conteúdo. Ou seja, essa "caixa" vai se adaptar ao tamanho do nosso texto */
+}
+
+section#img01 {
+    background-image: url(../background001.jpg);
+    background-size: cover;
+    background-position: right center;
+    background-attachment: fixed;
+}
+
+section#img02 {
+    background-image: url(../background002.jpg);
+    background-size: cover;
+    background-position: right center;
+    background-attachment: fixed;
 }
 
 footer {
