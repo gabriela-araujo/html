@@ -1,8 +1,21 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {
+    --font1: Verdana, Geneva, Tahoma, sans-serif;
+    --font2: 'Passion One', cursive;
+    --font3: 'Sriracha', cursive;
+
+}
+
+
+
 * {
     margin: 0px;
     padding: 0px;
+    font-size: 1em;
 
     /* Ao iniciar um projeto, é importante colocar como configuração global
     o ajuste de 0px em margin e padding, para resetar qualquer configuração default que o navegador
@@ -12,6 +25,7 @@
 html, body {
     min-height: 100vh;
     background-color: darkgray;
+    font-family: var(--font1);
 
     /* vh significa viewport que pode ser assimilada como JANELA DO NAVEGADOR. Então, quando dizemos que o html e o body
     terão uma altura mínima de 100 da janela de visualização do navegador, significa que independente do conteudo dentro
@@ -34,10 +48,13 @@ header {
 header h1 {
     padding-top: 50px;
     font-variant: small-caps;
+    font-family: var(--font2);
+    font-size: 10vw;
 }
 
 header p {
     padding-bottom: 50px;
+    font-family: var(--font1);
 }
 
 a {
@@ -55,6 +72,8 @@ section {
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
+    font-family: var(--font3);
+    font-size: 3.5vw;
 
     /* Aqui, adicionamos padding bottom e top de 10px para começar a criar um efeito parallax. Onde queremos que as sections tenham 10vh tanto do topo, quanto da parte debaixo para criar uma distância do próximo conteúdo. Isso ajuda a dar a sensação, quando rolamos a página pra baixo, de que o conteúdo está "mexendo" */
 }
@@ -72,8 +91,12 @@ section.imagem {
 }
 
 section.imagem > p {
-    width: 400px;
+    display: inline-block;
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0.246);
+
+    /* Aqui na section aonde teremos o texto, adicionamos um display inline-block para que se crie 
+    uma caixa que se adapta ao tamanho do conteúdo. Ou seja, essa "caixa" vai se adaptar ao tamanho do nosso texto */
 }
 
 footer {
